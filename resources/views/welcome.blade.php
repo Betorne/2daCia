@@ -21,15 +21,15 @@
                 <div class="relative overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/polygon-bg-element.svg')] dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/polygon-bg-element.svg')] before:bg-no-repeat before:bg-top before:bg-cover before:size-full before:-z-[1] before:transform before:-translate-x-1/2">
                     <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
                     <!-- Announcement Banner -->
-                    <img src="/assets/images/banner.jpg" alt="Banner" class="w-full h-auto rounded-lg">
+                    <!-- img src="/assets/images/banner.jpg" alt="Banner" class="w-full h-auto rounded-lg" -->
 
                     <!-- End Announcement Banner -->
 
                     <!-- Title -->
                     <div class="mt-5 max-w-2xl text-center mx-auto">
                         <h1 class="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
-                        La plantilla de Laravel
-                        <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent animate-pulse">Definitiva</span>
+                        Sistema de Emergencias 🚨
+                        <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent animate-pulse">2da Compañia</span>
                         </h1>
                     </div>
                     <!-- End Title -->
