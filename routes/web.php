@@ -28,6 +28,11 @@ Route::put('companies/{company}', [CompanyController::class, 'update'])->name('c
 Route::get('volunteers/create', [VolunteerController::class, 'create'])->name('volunteers.create');
 Route::post('volunteers', [VolunteerController::class, 'store'])->name('volunteers.store');
 
+Route::get('volunteers/signup', [VolunteerController::class, 'signup'])->name('volunteers.signup');
+Route::post('volunteers/signup', [VolunteerController::class, 'signupStore'])->name('volunteers.signup.store');
+Route::get('volunteers/{volunteer}/service', [VolunteerController::class, 'service'])->name('volunteers.service');
+Route::post('volunteers/{volunteer}/service', [VolunteerController::class, 'updateService'])->name('volunteers.service.update');
+
 Route::get('volunteers/{volunteer}/edit', [VolunteerController::class, 'edit'])->name('volunteers.edit');
 Route::put('volunteers/{volunteer}', [VolunteerController::class, 'update'])->name('volunteers.update');
 Route::delete('volunteers/{volunteer}', [VolunteerController::class, 'destroy'])->name('volunteers.destroy');

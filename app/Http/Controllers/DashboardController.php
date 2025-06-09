@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Emergency;
 use App\Models\Unit;
+use App\Models\Volunteer;
 use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
@@ -21,6 +22,8 @@ class DashboardController extends Controller
         $unidadesTotales = Unit::count();
         $unidadesDisponibles = Unit::where('availability', true)->count();
         $unidadesOcupadas = Unit::where('availability', false)->count();
+
+        $voluntariosServicio = Volunteer::where('service_code', '09')->get();
 
         // Gráfico de emergencias por tipo
         $porTipo = Emergency::select('type', DB::raw('count(*) as total'))
@@ -42,6 +45,7 @@ class DashboardController extends Controller
             'unidadesTotales',
             'unidadesDisponibles',
             'unidadesOcupadas',
+            'voluntariosServicio',
             'porTipo',
             'porPrioridad'
         ));
