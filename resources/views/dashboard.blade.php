@@ -28,6 +28,20 @@
         </div>
     </div>
 
+    {{-- Voluntarios en servicio --}}
+    <div class="bg-white rounded shadow p-6 mb-6">
+        <h2 class="text-xl font-bold mb-4">Voluntarios en Servicio</h2>
+        @if($voluntariosServicio->isEmpty())
+            <p class="text-gray-500">No hay voluntarios en servicio.</p>
+        @else
+            <ul class="list-disc list-inside">
+                @foreach($voluntariosServicio as $vol)
+                    <li>{{ $vol->name }} – {{ $vol->company->name }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div>
+
     {{-- Gráfico por tipo --}}
     <div class="bg-white rounded shadow p-6 mb-6">
         <h2 class="text-xl font-bold mb-4">Emergencias por Tipo</h2>
