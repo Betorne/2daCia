@@ -4,6 +4,13 @@
 <div class="max-w-2xl mx-auto bg-white p-6 rounded shadow">
     <h1 class="text-2xl font-bold text-gray-800 mb-6">Registrar emergencia</h1>
 
+    <form action="{{ route('emergency-types.seed') }}" method="POST" class="mb-4">
+        @csrf
+        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded">
+            Crear tipos de emergencia
+        </button>
+    </form>
+
     <form action="{{ route('emergencies.store') }}" method="POST" class="space-y-5">
         @csrf
 

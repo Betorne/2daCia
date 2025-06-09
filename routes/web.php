@@ -7,6 +7,7 @@ use App\Http\Controllers\DispatchController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\VolunteerController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EmergencyTypeController;
 
 
 
@@ -37,6 +38,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 //menu
 Route::resource('emergencies', EmergencyController::class);
+Route::post('emergency-types/seed', [EmergencyTypeController::class, 'seed'])->name('emergency-types.seed');
 Route::get('/emergencies/{emergency}', [EmergencyController::class, 'show'])->name('emergencies.show');
 Route::put('/emergencies/{emergency}/finalize', [EmergencyController::class, 'finalize'])->name('emergencies.finalize');
 Route::delete('/emergencies/{emergency}', [EmergencyController::class, 'destroy'])
