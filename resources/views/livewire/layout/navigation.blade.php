@@ -33,8 +33,11 @@ new class extends Component
                   <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         Dashboard
                     </x-nav-link>
-                    <x-nav-link :href="route('emergencies.index')" wire:navigate> 
+                    <x-nav-link :href="route('emergencies.index')" wire:navigate>
                         {{ __('Emergencias') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('emergencies.create')" wire:navigate>
+                        {{ __('Crear emergencia') }}
                     </x-nav-link>
                     <x-nav-link :href="route('units.index')"  wire:navigate> 
                         {{ __('Unidades') }}
@@ -99,6 +102,12 @@ new class extends Component
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('emergencies.index')" wire:navigate>
+                {{ __('Emergencias') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('emergencies.create')" wire:navigate>
+                {{ __('Crear emergencia') }}
             </x-responsive-nav-link>
         </div>
 
